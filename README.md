@@ -1,6 +1,7 @@
 cmus — C\* Music Player 
 =======================
-patched for artist collaberations by mapleint (bit of a botch, "Tyler, The Creator" turns into "Tyler", which is rather hilarious
+Patched for artist collaberations by mapleint  
+It's bit of a botch, "Tyler, The Creator" turns into "Tyler", which is rather hilarious
 
 https://cmus.github.io/
 
