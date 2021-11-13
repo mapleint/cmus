@@ -124,6 +124,9 @@ typedef size_t sort_key_t;
 #define TI_MATCH_ALBUMARTIST  (1 << 3)
 #define TI_MATCH_ALL          (~0)
 
+/* helper func */
+void terminate_comma(const char* str);
+
 /* initializes only filename and ref */
 struct track_info *track_info_new(const char *filename);
 void track_info_set_comments(struct track_info *ti, struct keyval *comments);

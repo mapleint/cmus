@@ -62,12 +62,23 @@ struct track_info *track_info_new(const char *filename)
 	return ti;
 }
 
+void terminate_comma(const char* str)
+{
+	if(!str)
+		return;
+	char* t = strchr(str, ',');
+	if(!t)
+		return;
+	*t = '\0';
+}
+
 void track_info_set_comments(struct track_info *ti, struct keyval *comments) {
 	long int r128_track_gain;
 	long int r128_album_gain;
 
 	ti->comments = comments;
 	ti->artist = keyvals_get_val(comments, "artist");
+	terminate_comma((char*)ti->artist);
 	ti->album = keyvals_get_val(comments, "album");
 	ti->title = keyvals_get_val(comments, "title");
 	ti->tracknumber = comments_get_int(comments, "tracknumber");
